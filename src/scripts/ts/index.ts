@@ -13,8 +13,8 @@ const body: HTMLElement | null = testLoadScript('body');
 const countIncludeChildrens = (element: HTMLElement) => {
   if (element instanceof HTMLElement) {
     const elementArray = Array.from(element.children);
-    log(`Element ${element.tagName} includes ${element.children.length} items`);
-    log('\n');
+    // log(`Element ${element.tagName} includes ${element.children.length} items`);
+    // log('\n');
     elementArray.forEach((item) => {
       if (item instanceof HTMLElement) countIncludeChildrens(item);
     });
