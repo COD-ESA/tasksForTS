@@ -1,6 +1,6 @@
 "use strict";
 // Задача на подсчет количества HTML элементов
-const { log } = console;
+// const { log } = console;
 // возвращает элемент или null если его нет в document
 const testLoadScript = (item) => {
     const elem = document.querySelector(item);
