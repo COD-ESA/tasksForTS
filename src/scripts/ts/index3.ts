@@ -15,7 +15,6 @@
   }
 
   log(stringNumber('Output string'));
-
   log(stringNumber('Hello!', 10));
 
   function len(s: string): number;
