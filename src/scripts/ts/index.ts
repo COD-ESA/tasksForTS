@@ -7,7 +7,6 @@ const testLoadScript = (item: string): HTMLElement | null => {
   if (elem instanceof HTMLElement) return elem;
   return null;
 };
-
 const body: HTMLElement | null = testLoadScript('body');
 
 const countIncludeChildrens = (element: HTMLElement) => {
