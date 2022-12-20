@@ -22,8 +22,5 @@
   };
 
   log(maxSalaries(salaries));
-
-  const d = [true, true, false];
-  log(d);
   /* eslint wrap-iife: ["error", "inside"] */
 })();
