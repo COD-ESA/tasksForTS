@@ -27,5 +27,12 @@
   }
   log(len('Solomon!'));
 
+  type Testfunc1<T, U> = {
+    (s: T, n: U): T;
+  };
+  const testFunc1: Testfunc1<string, number> = (s, n) => s + n;
+
+  log(testFunc1('hah', 100));
+
   /* eslint wrap-iife: ["error", "inside"] */
 })();

@@ -16,5 +16,7 @@
         return x.length;
     }
     log(len('Solomon!'));
+    const testFunc1 = (s, n) => s + n;
+    log(testFunc1('hah', 100));
     /* eslint wrap-iife: ["error", "inside"] */
 })();
