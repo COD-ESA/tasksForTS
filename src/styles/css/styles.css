@@ -6,3 +6,8 @@ body {
   background: -o-linear-gradient(left, rgb(2, 0, 36) 0%, rgb(81, 39, 115) 44%, rgb(78, 162, 179) 100%);
   background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(81, 39, 115) 44%, rgb(78, 162, 179) 100%);
 }
+
+input {
+  width: 75px;
+  height: 25px;
+}
