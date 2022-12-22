@@ -4,6 +4,7 @@
   log('hello!');
 
   /* eslint no-underscore-dangle: 0 */
+  /* eslint max-classes-per-file: ["error", 2] */
   class Person {
     _name: string;
 
@@ -35,5 +36,23 @@
   log(dima.sayHello());
   dima.age = 50;
   log(dima.sayHello());
+
+  class SuperPerson extends Person {
+    constructor(name: string, age: number) {
+      super(name, age);
+      this._name = name;
+      this._age = age;
+    }
+
+    saySuper(): string {
+      const msg = `Я супер герой по имени ${this._name}`;
+      return msg;
+    }
+  }
+
+  const superPerson: SuperPerson = new SuperPerson('Stepan', 35);
+  log(superPerson);
+  log(superPerson.sayHello());
+  log(superPerson.saySuper());
   /* eslint wrap-iife: ["error", "inside"] */
 })();
