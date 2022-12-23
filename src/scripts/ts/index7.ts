@@ -4,7 +4,7 @@
   log('hello!');
 
   /* eslint no-underscore-dangle: 0 */
-  /* eslint max-classes-per-file: ["error", 2] */
+  /* eslint max-classes-per-file: ["error", 3] */
   class Person {
     _name: string;
 
@@ -54,5 +54,55 @@
   log(superPerson);
   log(superPerson.sayHello());
   log(superPerson.saySuper());
+
+  interface User {
+    readonly name: string;
+    print(s: string): string;
+    send(obj: object): object;
+  }
+
+  class UserPerson implements User {
+    _name: string;
+
+    constructor(name: string) {
+      this._name = name;
+    }
+
+    get name() {
+      return `My name is ${this._name}`;
+    }
+
+    set name(value) {
+      this._name = value;
+    }
+
+    print(msg: string): string {
+      return msg;
+    }
+
+    send(x: object): object {
+      return x;
+    }
+  }
+
+  const userPerson: UserPerson = new UserPerson('Stas');
+  log(userPerson);
+  log(userPerson.send({ a: '!!!!', b: '++++' }));
+  log(userPerson.name);
+  userPerson.name = 'Maxim';
+  log(userPerson.name);
+
+  interface Obj {
+    name: string;
+    age: number;
+    address: string;
+  }
+  const obj: Obj = {} as Obj;
+  obj.name = 'Semen';
+  obj.age = 25;
+  obj.address = 'Moscow';
+  const key = Object.keys(obj) as Array<keyof typeof obj>;
+  log(key);
+
   /* eslint wrap-iife: ["error", "inside"] */
 })();
