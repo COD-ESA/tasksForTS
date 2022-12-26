@@ -39,5 +39,22 @@
   log(sharp1);
   const sharp2 = Sharp.create('SharpWhite');
   log(sharp2);
+
+  const obj = {
+    label1: ['1'],
+    label2: ['2'],
+    label3: ['3'],
+  };
+  const res = JSON.parse(JSON.stringify(obj, ['label1']));
+  log(res);
+  const getPost = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    log(response);
+    // const res = response.json();
+    response.json().then((t) => log(t));
+    // res.then((t) => log(t));
+  };
+  getPost();
+
   /* eslint wrap-iife: ["error", "inside"] */
 })();

@@ -11,3 +11,16 @@ input {
   width: 75px;
   height: 25px;
 }
+
+h1 {
+  font-size: 55px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: italic;
+}
+
+h1 {
+  border-color: "lime";
+  border-style: solid;
+  border-width: 2px;
+}
